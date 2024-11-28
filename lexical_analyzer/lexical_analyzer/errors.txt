@@ -1,0 +1,36 @@
+/* int num = 0xABCG;
+    int num = 01238;
+    int 2num;
+    "
+    '
+    {
+    (
+    int num = 0b012;
+
+ else if(ch=='(')
+            {
+               // var=ftell(fp);
+                //printf("--------------------->%ld\n",var);
+                char temp;
+                int temp_count=0;
+                int flag=1;
+                while((temp=fgetc(fp))!=EOF)
+                {
+                    temp_count++;
+                    if(temp==')')
+                    {
+                        int flag=0;
+                        fseek(fp,-temp_count,SEEK_CUR);
+                      //  var=ftell(fp);
+                        //printf("--------------------->%ld\n",var);
+                        break;
+                    }   
+                }
+                if(flag)
+                {
+                    printf("Error:Inporper operator { ");
+                    fseek(fp,-temp_count,SEEK_CUR);
+                }
+                var=ftell(fp);
+                printf("--------------------->%ld\n",var);
+            }
